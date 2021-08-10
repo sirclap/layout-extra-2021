@@ -1,0 +1,166 @@
+@import "theme";
+
+header {
+  .toolbar {
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.toolbar {
+  display: flex;
+  padding: 0.5rem;
+
+  &-actions {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: flex-end;
+  }
+}
+
+.page-title {
+  color: $page-title-color;
+  background-color: $page-title-bg-color;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.page-container {
+  display: flex;
+
+  nav {
+    background-color: $nav-bg-color;
+
+    .menu {
+      position: sticky;
+      top: 0;
+
+      @media (max-width: $mobile-breakpoint) {
+        position: relative;
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  main {
+    background-color: $main-bg-color;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.menu {
+  &-title {
+    color: $menu-title-color;
+    background-color: $menu-title-bg-color;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    @media (max-width: $mobile-breakpoint) {
+      flex-direction: row;
+    }
+
+    li {
+      background-color: $menu-option-bg-color;
+      text-transform: capitalize;
+      padding: 0.5rem 0.5rem;
+      border-bottom: $menu-option-border;
+
+      @media (max-width: $mobile-breakpoint) {
+        margin: 0.5rem;
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  > .item {
+    margin: 2rem;
+    width: 225px;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin: 4px 4px 0px 4px;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: $card-border;
+  background-color: $card-bg-color;
+  padding: 2rem;
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: row;
+    border: none;
+    border-radius: 0;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  &-content {
+    margin-top: 1rem;
+    text-align: center;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin: auto 1rem;
+      text-align: left;
+    }
+  }
+}
+
+footer {
+  background-color: $foot-bg-color;
+  padding: 0.5rem;
+}
+
+img.avatar {
+  border-radius: 50%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
