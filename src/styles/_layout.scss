@@ -1,0 +1,42 @@
+header {
+  .toolbar {
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.page-container {
+  display: flex;
+
+  nav {
+    background-color: $nav-bg-color;
+
+    .menu {
+      position: sticky;
+      top: 0;
+
+      @media (max-width: $mobile-breakpoint) {
+        position: relative;
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  main {
+    background-color: $main-bg-color;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: $foot-bg-color;
+  padding: 0.5rem;
+}
